@@ -1,12 +1,12 @@
 # sha
 
-![[./.github/SHA.png]]
+![[https://github.com/hmthanh/sha/blob/main/.github/SHA-2.png?raw=true]]
 
 Implement SHA from scratch
 
 Pseudocode
 
-```
+```text
 Note 1: All variables are 32 bit unsigned integers and addition is calculated modulo 232
 Note 2: For each round, there is one round constant k[i] and one entry in the message schedule array w[i], 0 ≤ i ≤ 63
 Note 3: The compression function uses 8 working variables, a through h
