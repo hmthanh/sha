@@ -77,7 +77,7 @@
                                     <div class="form-group">
                                         <div class="mb-3">
                                             <label for="" class="form-label">Text</label>
-                                            <textarea class="form-control" name="txtInput" id="txtInput" rows="3"></textarea>
+                                            <textarea class="form-control fs-4" name="txtInput" id="txtInput" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -87,18 +87,7 @@
                     </div>
                     <div style="margin-top:20px;"></div>
                     <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div style="margin-top: 10px;"></div>
-                                    <div class="form-group">
-                                        <textarea type="text" class="form-control" name="txtOutput" value="1"
-                                            id="txtOutput" aria-describedby="helpId" placeholder="" rows="5"></textarea>
-                                        <small id="helpId" class="form-text text-muted">Hex value</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -117,6 +106,20 @@
                             <div class="form-group" style="text-align: center;">
                                 <button type="button" class="btn btn-success btn-lg" id="btnHash"
                                     style="padding: 0.375rem 4rem; width:100%;">Hash</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="margin-top: 10px;"></div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control fs-3" name="txtOutput" value="1"
+                                    id="txtOutput" aria-describedby="helpId" placeholder="" rows="5"></textarea>
+                                <small id="helpId" class="form-text text-muted ">Hex value</small>
                             </div>
                         </div>
                     </div>
@@ -216,6 +219,7 @@
             var sha256 = function sha256(ascii) {
                 var mathPow = Math.pow;
                 var maxWord = mathPow(2, 32);
+
                 var lengthProperty = 'length'
                 var i, j; // Used as a counter across the whole file
                 var result = ''
