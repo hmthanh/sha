@@ -1,6 +1,6 @@
 # sha
 
-[[./github/SHA.png]]
+![[./github/SHA.png]]
 
 Implement SHA from scratch
 
