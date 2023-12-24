@@ -95,18 +95,14 @@
                             <h4 class="card-title">SHA Algorithm</h4>
                             <div class="mb-3">
                                 <label for="" class="form-label">Type</label>
-                                <select
-                                    class="form-select form-select-lg"
-                                    name=""
-                                    id=""
-                                >
-                                    <option selected>SHA256</option>
-                                    <option value="">SHA128</option>
-                                    <option value="">SHA256</option>
-                                    <option value="">SHA512</option>
+                                <select class="form-select form-select-lg" name="algorithm" id="algorithm">
+                                    <option selected value="SHA256">SHA256</option>
+                                    <option value="SHA128">SHA128</option>
+                                    <option value="SHA256">SHA256</option>
+                                    <option value="SHA512">SHA512</option>
                                 </select>
                             </div>
-                            
+
 
                             <div style="margin-top: 10px;"></div>
                             <div class="form-group" style="text-align: center;">
@@ -204,84 +200,6 @@
         </div>
         <div style="padding-top: 50px;"></div>
         <!-- <hr /> -->
-        <!-- <div style="margin-top: 50px;"></div> -->
-        <!-- <div class="container">
-            <h4 id="find-coprime">Find coprime</h4>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">n</h4>
-                            <div class="form-group">
-                                <input type="number" class="form-control" name="cop" value="20" id="cop"
-                                    aria-describedby="helpId" placeholder="n">
-                            </div>
-                            <div style="margin-top: 20px;"></div>
-
-                            <div class="form-group">
-                                <small id="helpId" class="form-text text-muted">Click to select Z<sub>n</sub></small>
-                                <div class="list-group">
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">17</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">37</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">131</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">557</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">751</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">1123</button>
-                                    <button type="button"
-                                        class="btn btn-secondary coprime-number list-group-item">2731</button>
-                                    <button type="button"
-                                        class="btn btn-success coprime-number list-group-item">4987</button>
-                                    <button type="button"
-                                        class="btn btn-primary coprime-number list-group-item">12697</button>
-                                    <button type="button"
-                                        class="btn btn-danger coprime-number list-group-item">90031</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Coprime</h4>
-                            <div class="form-group">
-                                <textarea type="text" class="form-control" name="txtPrime" value="1" id="txtPrime"
-                                    aria-describedby="helpId" placeholder="" rows="5"></textarea>
-                                <small id="helpId" class="form-text text-muted">All Coprime ∈ U(Z<sub>n</sub>)</small>
-                            </div>
-                            <div style="margin-top: 10px;"></div>
-                            <div class="form-group" style="text-align: left;">
-                                <button type="button" class="btn btn-info" id="btnCoprime"
-                                    style="padding: 0.375rem 3rem;">Find Coprime</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 20px;"></div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">E * D mod n = 1</h4>
-                            <div class="form-group">
-                                <textarea type="text" class="form-control" name="txtED" value="1" id="txtED"
-                                    aria-describedby="helpId" placeholder="" rows="5"></textarea>
-                                <small id="helpId" class="form-text text-muted">E, D ∈ U(Z<sub>n</sub>)</small>
-                            </div>
-                            <div style="margin-top: 10px;"></div>
-                            <div class="form-group" style="text-align: left;">
-                                <button type="button" class="btn btn-primary" id="btnED"
-                                    style="padding: 0.375rem 4.2rem;">Find E, D</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div style="padding-top: 50px;"></div>
 
         <hr />
@@ -338,6 +256,8 @@
                 //     0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,
                 //     0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
                 //     0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2];
+                
+                // k = [1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998];
                 console.log("k", k)
 
                 ascii += '\x80' // Append Ƈ' bit (plus zero padding)
@@ -409,12 +329,11 @@
                         var b = (hash[i] >> (j * 8)) & 255;
                         result += ((b < 16) ? 0 : '') + b.toString(16);
                         bit += ((b < 16) ? 0 : '') + b.toString(16);
-                        console.log("result", bit)
                     }
                     $("#h" + i).val(bit);
                 }
 
-                
+
 
 
                 return result;
