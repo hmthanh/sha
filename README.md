@@ -1,6 +1,6 @@
 # sha
 
-![](https://github.com/hmthanh/sha/blob/main/.github/SHA-2.png)
+![SHA-2](https://github.com/hmthanh/sha/blob/main/.github/SHA-2.png)
 
 Implement SHA from scratch
 
