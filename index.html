@@ -64,25 +64,17 @@
     </nav>
 
     <div class="container-fluid p-3 px-md-4 mb-3">
-        <div style="margin-top: 50px;"></div>
         <div class="container">
             <h4 id="sha">SHA</h4>
-            <<div
-                class="row justify-content-center align-items-center g-2"
-            >
-               <img src="./.github/SHA-2.png" alt="SHA-2">
-            </div>
-            
             <div class="row">
                 <div class="col-9">
                     <div class="row">
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Input</h4>
                                     <div class="form-group">
                                         <div class="mb-3">
-                                            <label for="" class="form-label">Text</label>
+                                            <label for="" class="form-label">Text input</label>
                                             <textarea class="form-control fs-4" name="txtInput" id="txtInput"
                                                 rows="3"></textarea>
                                         </div>
@@ -92,7 +84,6 @@
                         </div>
 
                     </div>
-                    <div style="margin-top:20px;"></div>
                 </div>
 
                 <div class="col">
@@ -119,13 +110,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row ">
+                <div class="col">
+                    <div class="justify-content-center align-middle text-center">
+                        <img src="./.github/SHA-2.png" height="300px" alt="SHA-2" />
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
                         <label for="" class="form-label">h0</label>
                         <input type="text" class="form-control" name="h0" id="h0" aria-describedby="h0"
                             placeholder="" />
-                        <small id="h0" class="form-text text-muted">a</small>
+                        <small id="h0" class="form-text text-muted">A</small>
                     </div>
                 </div>
 
@@ -134,7 +133,7 @@
                         <label for="" class="form-label">h1</label>
                         <input type="text" class="form-control" name="h1" id="h1" aria-describedby="h1"
                             placeholder="" />
-                        <small id="h1" class="form-text text-muted">b</small>
+                        <small id="h1" class="form-text text-muted">B</small>
                     </div>
                 </div>
 
@@ -143,7 +142,7 @@
                         <label for="" class="form-label">h2</label>
                         <input type="text" class="form-control" name="h2" id="h2" aria-describedby="h2"
                             placeholder="" />
-                        <small id="h2" class="form-text text-muted">c</small>
+                        <small id="h2" class="form-text text-muted">C</small>
                     </div>
                 </div>
 
@@ -152,7 +151,7 @@
                         <label for="" class="form-label">h3</label>
                         <input type="text" class="form-control" name="h3" id="h3" aria-describedby="h3"
                             placeholder="" />
-                        <small id="h3" class="form-text text-muted">d</small>
+                        <small id="h3" class="form-text text-muted">D</small>
                     </div>
                 </div>
                 <div class="col">
@@ -160,7 +159,7 @@
                         <label for="" class="form-label">h4</label>
                         <input type="text" class="form-control" name="h4" id="h4" aria-describedby="h4"
                             placeholder="" />
-                        <small id="h4" class="form-text text-muted">e</small>
+                        <small id="h4" class="form-text text-muted">E</small>
                     </div>
                 </div>
                 <div class="col">
@@ -168,7 +167,7 @@
                         <label for="" class="form-label">h5</label>
                         <input type="text" class="form-control" name="h5" id="h5" aria-describedby="h5"
                             placeholder="" />
-                        <small id="h5" class="form-text text-muted">f</small>
+                        <small id="h5" class="form-text text-muted">F</small>
                     </div>
                 </div>
                 <div class="col">
@@ -176,7 +175,7 @@
                         <label for="" class="form-label">h6</label>
                         <input type="text" class="form-control" name="h6" id="h6" aria-describedby="h6"
                             placeholder="" />
-                        <small id="h6" class="form-text text-muted">g</small>
+                        <small id="h6" class="form-text text-muted">G</small>
                     </div>
                 </div>
                 <div class="col">
@@ -184,7 +183,7 @@
                         <label for="" class="form-label">h7</label>
                         <input type="text" class="form-control" name="h7" id="h7" aria-describedby="h7"
                             placeholder="" />
-                        <small id="h7" class="form-text text-muted">h</small>
+                        <small id="h7" class="form-text text-muted">H</small>
                     </div>
                 </div>
 
@@ -262,7 +261,7 @@
                 //     0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,
                 //     0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
                 //     0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2];
-                
+
                 // k = [1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998];
                 console.log("k", k)
 
