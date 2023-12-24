@@ -1,5 +1,7 @@
 # sha
 
+[[./github/SHA.png]]
+
 Implement SHA from scratch
 
 Pseudocode
